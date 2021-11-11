@@ -19,7 +19,8 @@ data: {
   images: ['img/01.jpg', 'img/02.jpg', 'img/03.jpg', 'img/04.jpg', 'img/05.jpg'
   ],
   //setto il mio contatore
-  counter: 0
+  counter: 0,
+  citta
 
 },
 
@@ -28,9 +29,22 @@ methods: {
 
   //creo la funziona attraverso la quale incrementerò il contatore al click di next
   nextImage(){
-    //devo usare il this!!!
+    //incremento il contatore
     this.counter++;
-    //
+    //condizione oltre la quale il counter deve ricominciare da capo
+    if(this.counter > this.images.length - 1){
+      this.counter = 0;
+    }
+  },
+  //stessa cosa farò per il pulsante prev
+  
+  prevImage(){
+    //decremento il contatore
+    this.counter--;
+    //conzione
+    if(this.counter < 0){
+      this.counter = this.images.length - 1;
+    }
   }
 }
 

@@ -17,8 +17,8 @@
       <div class="slider-left">
         <!--uso v-bind,per inserire una variabile, nella sua forma contratta ":src"-->
         <!--v-bind nella sua forma contratta estesa "v-bind:src" -->
-        <!--alla variabile images do anche l'indice dell'array-->
-        <img :src="images[0]" alt="">
+        <!--alla variabile images do anche il counter cosi al suo variare cambierà acnhe la doto di conseguenza-->
+        <img :src="images[counter]" alt="">
         <div class="text">
           <h2>Città</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam accusantium aliquid, laborum repellendus, deleniti dolorem voluptatem et a, dolorum quis.</p>
@@ -41,7 +41,8 @@
         <div class="box">
           <img src="img/05.jpg" alt="">
         </div>
-        <span @click class="prev"> &uarr; </span>
+        <!--inserisco l'evento click che mi richiama la funzione -->
+        <span @click="prevImage" class="prev"> &uarr; </span>
         <span @click="nextImage" class="next"> &darr; </span>
       </div>
      </div>
