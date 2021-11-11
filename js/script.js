@@ -20,7 +20,8 @@ data: {
   ],
   //setto il mio contatore
   counter: 0,
-  citta
+  //creo un array con le città
+  citta: ['Zurigo', 'Lichtstein', 'Londra', 'Mosca', 'Bali']
 
 },
 
