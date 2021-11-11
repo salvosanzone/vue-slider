@@ -15,7 +15,10 @@
    <div class="container">
      <div class="slider">
       <div class="slider-left">
-        <img src="img/01.jpg" alt="">
+        <!--uso v-bind,per inserire una variabile, nella sua forma contratta ":src"-->
+        <!--v-bind nella sua forma contratta estesa "v-bind:src" -->
+        <!--alla variabile images do anche l'indice dell'array-->
+        <img :src="images[0]" alt="">
         <div class="text">
           <h2>Città</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam accusantium aliquid, laborum repellendus, deleniti dolorem voluptatem et a, dolorum quis.</p>
@@ -38,8 +41,8 @@
         <div class="box">
           <img src="img/05.jpg" alt="">
         </div>
-        <span class="prev"> &uarr; </span>
-        <span class="next"> &darr; </span>
+        <span @click class="prev"> &uarr; </span>
+        <span @click="nextImage" class="next"> &darr; </span>
       </div>
      </div>
    </div>
